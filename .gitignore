@@ -135,3 +135,13 @@ Thumbs.db
 *.pth
 models/saved_summary_model/pytorch_model.bin
 models/saved_summary_model/model.safetensors
+
+# Data
+Data/
+data/
+research/.ipynb_checkpoints/
+
+# Data
+Data/
+data/
+research/.ipynb_checkpoints/
