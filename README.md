@@ -57,7 +57,7 @@ text-summarizer-app/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/ai-text-summarizer-app.git
+   git clone https://github.com/MANADIP/ai-text-summarizer-app.git
    cd ai-text-summarizer-app
    ```
 
