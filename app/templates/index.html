@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer - AI-Powered Summaries</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Text Summarizer</h1>
+            <h3>Fast summaries with Hugging Face models</h3>
+            <p class="lead">Paste your content below and get a simple, easy-to-read summary in seconds. Powered by fine-tuned T5 Transformers.</p>
+        </header>
+
+        <form id="summarizer-form">
+            <textarea id="source-text" name="source-text" placeholder="Paste or type your text here... (minimum 10 characters)"></textarea>
+            <button type="submit">Summarize</button>
+        </form>
+
+        <div class="summary-output" aria-live="polite">
+            <h3>Summary</h3>
+            <p id="summary-text">Your generated summary will appear here.</p>
+        </div>
+        
+        <div class="note">
+            <p><strong>Note:</strong> This model is optimized for dialogues and long articles.</p>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

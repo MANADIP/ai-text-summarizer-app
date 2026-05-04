@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  text-summarizer:
+    build: .
+    container_name: text-summarizer-app
+    ports:
+      - "8000:8000"
+    environment:
+      - FASTAPI_ENV=production
+      - LOG_LEVEL=info
+      - HOST=0.0.0.0
+      - PORT=8000
+    volumes:
+      - ./models:/app/models:ro
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+    networks:
+      - summarizer-network
+
+networks:
+  summarizer-network:
+    driver: bridge
